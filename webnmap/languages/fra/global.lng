@@ -1,0 +1,6 @@
+NG_OK=Ok
+NG_ABORT=Abbrechen
+NG_CANCEL=Abbrechen
+NG_MULTILINE=Dieser Eintrag umfasst 2 Zeile, diese ist die erste
+und diese ist die zweite.
+NG_HELLO_WORLD=Hallo Welt!<br>Wie geht es Dir?

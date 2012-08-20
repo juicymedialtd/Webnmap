@@ -1,0 +1,377 @@
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	background-image: url(/gfx/background.gif);
+	background-position: center center;
+}
+
+body, div, p, td, th, caption, blockquote {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #404040;
+}
+
+a {
+	cursor: hand;
+	cursor: pointer;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.ToolTip {
+	border:1px solid #000000;
+	background-color:#ffffff;
+	padding: 3px 6px;
+}
+
+.b-taskbar-notification {
+	position: absolute;
+	top: 3px;
+	right: 0;
+	width: 50px;
+	height: 25px;
+	padding-top: 5px;
+	border-left: 1px solid #94a9be;
+	font-family: Tahoma, Verdana;
+	font-size: 11px;
+	line-height: 15px;
+	text-align: center;
+}
+
+.b-windowarea {
+	background-image: url(/gfx/background.gif);
+	background-position: center center;
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+}
+
+.b-windowhead {
+	text-align:left;
+}
+
+.b-windowbody {
+	text-align:left;
+}
+
+.s-loading {
+	position: absolute;
+	top: 40%;
+	left: 44%;
+	height: 50px;
+	z-index: 999;
+}
+
+.s-loading-left {
+	width: 5px;
+	height: 50px;
+	background-image: url(/gfx/loading_left.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.s-loading-mid {
+	height: 50px;
+	background-image: url(/gfx/loading_mid.gif);
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.s-loading-content {
+	padding: 0 25px;
+}
+
+.s-loading-right {
+	width: 5px;
+	height: 50px;
+	background-image: url(/gfx/loading_right.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#portal-header {
+	position: relative;
+	width: 760px;
+	height: 58px;
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 0 1px 1px 1px;
+	background-color: #ffffff;
+	background-image: url(/gfx/header_background.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	padding: 4px;
+}
+#portal-header-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+/* search box */
+#portal-header-login {
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+}
+.portal-username-text {
+	width: 110px;
+	height: 15px;
+	border: 1px solid #e0e0e0;
+	padding: 0 3px;
+	font-family: Verdana;
+	font-size: 10px;
+	line-height: 15px;
+	color: #404040;
+}
+
+.portal-password-text {
+	width: 110px;
+	height: 15px;
+	border: 1px solid #e0e0e0;
+	padding: 0 3px;
+	font-family: Verdana;
+	font-size: 10px;
+	line-height: 15px;
+	color: #404040;
+}
+
+.portal-login-submit {
+	background-color: #ffffff;
+	padding: 0 2px;
+	border: 1px solid #e0e0e0;
+	font-family: Verdana;
+	font-size: 10px;
+	line-height: 13px;
+}
+
+#portal-main {
+	position: relative;
+	padding: 0 5px;
+}
+
+/* this height is used to drop into */
+.portal-column-content {
+	height:300px;
+}
+
+
+/* portal column wrappers */
+table.portal-columns-table {
+	table-layout: fixed;
+}
+td.portal-column {
+	position: relative;
+	vertical-align: top;
+}
+td.portal-column.col-left { width: 205px; padding-right: 5px; }
+td.portal-column.col-middle { width: 535px; }
+td.portal-column.col-right { width: 205px; padding-left: 5px; }
+.portal-column-inner {
+	position: relative;
+	width: 100%;
+	padding-top: 5px;
+}
+
+/* add portlet button */
+.add-portlet-control {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 17px;
+	z-index: 1;
+	overflow: hidden;
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 0 1px 1px 1px;
+	background-color: #ffffff;
+	background-image: url(/gfx/additempanel_background.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+.add-portlet-button {
+	position: absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	text-align: center;
+}
+.add-portlet-button-inner {
+	background-image: url(/gfx/additempanel_arrow.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding-right: 12px;
+	font-family: Verdana;
+	font-size: 10px;
+	line-height: 15px;
+}
+.add-portlet-button-sel .add-portlet-button-inner {
+	background-position: 100% -12px;
+}
+.b-add-portlet-list-outer {
+	position: absolute;
+	bottom: 17px;
+	left:0;
+	width: 100%;
+	height: 100px;
+	padding: 0 1px;
+}
+.b-add-portlet-list-inner {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #e0e0e0;
+	background-image: url(/gfx/additemlist_background.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	background-color: #f7fbfb;
+}
+.b-add-portlet-listitem {
+	position: relative;
+	line-height: 14px;
+	border-bottom: 1px solid #ffffff;
+	padding-left: 4px;
+	cursor: hand;
+	cursor: pointer;
+}
+.b-add-portlet-listitem-hov {
+	font-weight: bold;
+}
+.b-add-portlet-listitem-pres {
+	font-weight: bold;
+	color: #666666;
+}
+
+/* portlet widget */
+
+.b-portlet-outer2 {
+	position: relative;
+	padding-bottom:8px;
+}
+.b-portlet-outer {
+	border: 1px solid #e0e0e0;
+	background-image: url(/gfx/portlet_background.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #f3f3f3;
+}
+.b-portlet-inner {
+	position: relative;
+	padding: 23px 1px 1px 1px;
+}
+.b-portlet-head-outer {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 23px;
+	background-image: url(/gfx/portlet_head_start.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.b-portlet-head-inner {
+	position: relative;
+	width: 100%;
+	height: 23px;
+	background-image: url(/gfx/portlet_head_end.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-left: 16px;
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 23px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+/* portlet head controls */
+.portlet-head-controls {
+	position: absolute;
+	right: 10px;
+	top: 4px;
+}
+.b-portlet-control {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+	overflow: hidden;
+	line-height: 16px;
+}
+.b-portlet-control-shade { background-image: url(/gfx/portlet_control_shade.gif); }
+.b-portlet-sel .b-portlet-control-shade { background-image: url(/gfx/portlet_control_shade_sel.gif); }
+.b-portlet-control-close { background-image: url(/gfx/portlet_control_close.gif); }
+.b-portlet-control-hov { background-position: 0px -16px; }
+.b-portlet-control-pres { background-position: 0px -32px !important; }
+.b-portlet-body-outer {
+	border: 1px solid #e0e0e0;
+	background-color: #ffffff;
+}
+.b-portlet-body-inner {
+	display: none;
+}
+.b-portlet-sel .b-portlet-body-inner {
+	display: block !important;
+}
+
+.mainmenu a {
+	text-decoration: none;
+	text-align: center;
+	clear: both;
+	display: block;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	color: #666666;
+}
+
+/* B:TREELIST */
+.b-treelist {
+    border: 1px solid #b9cfd8;
+	background-color: #ffffff;
+}
+/* B:TREELIST HEADER */
+.tasklist-head {
+    padding: 1px 0 0 5px;
+	background-color: #f9f9f9;
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom: 1px solid #b9cfd8;
+	border-right: 1px solid #b9cfd8;
+	cursor: default;
+}
+/* B:TREELISTROW */
+.b-treelistrow-hov {
+	background-color: #eaeefb;
+}
+/* B:TREELISTCELL */
+.b-treelistcell {
+	white-space: nowrap;
+	cursor: default;
+	padding: 0 50px 0 5px;
+}
+
+.b-step-overview-heading {
+    border: 1px solid #b9cfd8;
+	display: inline;
+	clear:none;
+}

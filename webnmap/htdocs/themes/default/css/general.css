@@ -1,0 +1,183 @@
+/* General body and font styles */
+body {
+	background-color: #1d3f7c;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	color: black;
+}
+
+/* Use this to initial hide the source code */
+xmp {
+	display: none;
+}
+html, body {
+	scrollbar-3dlight-color: #7f99a8;
+	scrollbar-arrow-color: #7f99a8;
+	scrollbar-base-color: #ffffff;
+	scrollbar-darkshadow-color: #7f99a8;
+	scrollbar-face-color: #ffffff;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #7f99a8;
+	scrollbar-track-color: #ffffff;
+}
+
+.xmp {
+	overflow:hidden;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 100%;
+	padding: 14px 13px 14px 8px;
+
+
+}
+
+
+.container {
+	width: 100%; height: 100%;
+	overflow: hidden;
+}
+#wrapper4 {
+	background: url(../gfx/main_top_left.gif) white top left no-repeat;
+}
+#wrapper3 {
+	background: url(../gfx/main_top_right.gif) top right no-repeat;
+}
+#wrapper2 {
+	background: url(../gfx/main_bottom_left.gif) bottom left no-repeat;
+}
+#wrapper1 {
+	background: url(../gfx/main_bottom_right.gif) bottom right no-repeat;
+	padding: 0 6px 18px 4px;
+	position: relative;
+	padding:4px;
+}
+
+
+/*	################################################
+	GENERAL STYLES
+################################################ */
+
+form {
+	line-height:18px;
+	margin:0;
+}
+input {
+	height:18px;
+	border:1px solid #B9CFD8;
+	margin:0 0 0 10px;
+}
+textarea {
+	border:1px solid #B9CFD8;
+}
+
+
+/*	################################################
+		PANEL STYLES
+	################################################ */
+#HEADER {
+	font-size:18px;
+	font-family:arial;
+	background:#FFF;
+	color:#7C90CD;
+	padding:0 10px;
+	line-height:26px;
+	text-align:left;
+	font-weight:bold;
+}
+
+#MODAL {
+	height:260px;
+}
+
+#MODAL form {
+	overflow:auto;
+}
+
+#MODAL p {
+	padding:0;
+	clear:both;
+}
+
+#MODAL label {
+	display:block;
+	width:80px;
+	float:left;
+}
+
+#MODAL input {
+	width:250px;
+	margin:0;
+}
+
+#MODAL textarea {
+	width:350px; height:100px;
+	margin-bottom:10px;
+}
+
+#LIST {
+	border-bottom:1px solid #B9CFD8;
+	padding:2px 0 0 0;
+}
+
+#VIEW {
+	border:10px solid #EBEFFB;
+}
+
+#VIEW div {
+	background:#FFF;
+	position:absolute;
+	padding:10px;
+	width:100%;
+}
+
+#VIEW h1 {
+	color:#7C90CD;
+	font-size:18px;
+	font-family:arial;
+	font-weight:bold;
+	margin:0;
+	padding:20px 10px 0 10px;
+	border-bottom:1px solid #EBEFFB;
+}
+
+#VIEW p {
+	line-height:16px;
+	margin:2em 0;
+}
+
+.b-navpanelhead-sel {
+	font-weight:bold;
+}
+
+.b-datasource td div {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	padding: 2px 8px 0 8px;
+	height: 19px;
+	width: 100%;
+	overflow: hidden;
+	white-space:nowrap;
+	cursor: default;
+}
+.b-datasource td {
+	border-width: 0 1px 0px 0;
+	border-style: solid;
+	border-color: white #809aa9 #e7f0f4 white;
+}
+
+.b-datasource .b-listrow-hov * {
+	background-color: #eaeefb;
+}
+
+.b-datasource .b-listgridrow-sel * {
+	background-color: #7b8fcd;
+	color: #ffffff;
+}
+

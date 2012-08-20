@@ -1,0 +1,6 @@
+$db_name="[edit]";
+$db_ip="[edit]";
+$db_user="[edit]";
+$db_pass="[edit]";
+
+return true;

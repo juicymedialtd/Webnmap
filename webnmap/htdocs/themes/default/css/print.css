@@ -1,0 +1,27 @@
+/* This CSS file is only used by the print popup! */
+
+* {
+	font-family:arial, verdana, sans-serif;
+}
+
+p img {
+	float:right;
+	margin:0 0 10px 20px;
+}
+
+h2 {
+	margin:0;
+	padding:0;
+	font-size:22px;
+	font-weight:bold;
+	color:#00245D;
+}
+
+.Article-Date {
+	font-size:10px;
+	color:#D00;
+}
+
+.Article-Info {
+	font-weight:bold;
+}

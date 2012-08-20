@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="author" content="Juicy Media" />
+		<title>Juicy Media Presentation Client</title>
+		<style type="text/css">
+			* {
+				-moz-box-sizing: border-box;
+				font-size: 11px;
+				font-family: Arial, Verdana, sans-serif;
+			}
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				padding-left: 30px;
+				background-color: #ffffff;
+			}
+			a {
+				color: #4F97C7;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			h1{
+				font-size: 17px;
+				font-weight: bold;
+				margin-top: 25px;
+				margin-bottom: 0;
+				border-bottom: 1px solid #4F97C7;
+				padding-bottom: 3px;
+			}
+			h2{
+				font-weight: bold;
+				margin-top: 20px;
+				margin-bottom: 0;
+				border-bottom: 1px solid #4F97C7;
+				padding-bottom: 3px;
+			}
+			p {
+				margin-top: 2px;
+			}
+			ul {
+				margin-top: 2px;
+				list-style: square;
+			}
+			li {
+				margin-left: -15px;
+			}
+			.container {
+				width: 595px;
+				padding: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 error codes:
+			   0 : Unsupported browser
+			   1 : activeX Disabled
+			   2 : corefile error
+			*/
+			var rxErrorId 	= new RegExp(/\?e=(\d*)&/);
+			var rxErrorFile	= new RegExp(/&f=(.*)$/);
+			var sSearch		= location.search;
+			var iErrorId  	= rxErrorId.test(sSearch) ? rxErrorId.exec(sSearch)[1] : false;
+			var sErrorFile	= rxErrorFile.test(sSearch) ? rxErrorFile.exec(sSearch)[1] : false;
+
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="errorcode0" style="display:none;">
+				<h1>Unsupported browser</h1>
+				<p>This software does not support the browser (version) you are currently using. Please try one of the browsers listed below:</p>
+
+				<h2>Windows (95, 98, 2000, XP and 2003)</h2>
+				<ul>
+					<li>Internet Explorer 5</li>
+					<li>Internet Explorer 5.5</li>
+					<li>Internet Explorer 6</li>
+					<li>Firefox 0.8+</li>
+					<li>Mozilla 1.5+</li>
+					<li>Netscape 7.2+</li>
+				</ul>
+
+				<h2>Linux and Unix</h2>
+				<ul>
+					<li>Firefox 0.8+</li>
+					<li>Mozilla 1.5+</li>
+					<li>Netscape 7.2+</li>
+				</ul>
+
+				<h2>Apple (Mac OS X 10.2+)</h2>
+				<ul>
+					<li>Firefox 0.8+</li>
+					<li>Camino 0.8+</li>
+					<li>Mozilla 1.5+</li>
+					<li>Netscape 7.2+</li>
+				</ul>
+				<p>If you want to upgrade your browser we recommend <a href="http://www.mozilla.com/firefox">Firefox</a>.</p>
+			</div>
+			<div id="errorcode1" style="display:none;">
+				<h1>ActiveX disabled</h1>
+				<p>This software requires that you have enabled an ActiveX control marked for safe scripting. Either your ActiveX control is disabled, or the ActiveX control is not enabled for safe scripting. Please follow the instructions below to enable the ActiveX control and enable it for safe scripting.</p>
+   				<h2>How do I enable ActiveX Control in Internet Explorer?</h2>
+				 <ol>
+					<li>From the browser menu, click Tools > Internet Options</li>
+					<li>Click on the Security tab</li>
+					<li>Select the globe icon representing the Internet Zone</li>
+					<li>Click Custom Level</li>
+					<li>Scroll down to the ActiveX controls and plug-ins section</li>
+					<li>Under Download signed ActiveX contols select Prompt</li>
+					<li>Under Run ActiveX controls and plug-ins select Enable</li>
+					<li>Under Script ActiveX controls marked safe for scripting select Enable</li>
+					<li>Click OK to close the Security Settings window (If prompted to verify that you want to change the security settings for this zone click Yes)</li>
+					<li>Click OK to close the Internet Options window</li>
+				</ol>
+			</div>
+			<div id="errorcode2" style="display:none;">
+				<h1>Core file could not be loaded</h1>
+				<p>The Presentation Client could not load the core file (bpc_0x.js). Please verify the following:</p>
+				<ul>
+					<li>The core file exists in the same folder as the boot.js file.</li>
+					<li>The web server has the appropriate permissions and settings to execute the core file.</li>
+				</ul>
+			</div>
+			<div id="unknown" style="display:none;">
+				<h1>An unknown error occured.</h1>
+			</div>
+			<script type="text/javascript">
+				document.getElementById((iErrorId ? 'errorcode'+iErrorId : 'unknown')).style.display = 'block';;
+				if(sErrorFile){
+					document.write('<h2>The problem occurred at: '+sErrorFile+'</h2><p><a href="'+sErrorFile+'">Try again</a></p>');
+				}
+			</script>
+		</div>
+	</body>
+</html>
