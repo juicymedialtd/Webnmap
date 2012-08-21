@@ -68,8 +68,8 @@ if (defined($sth))
 				$sthu->finish();
 			}
 
-			system("/home/dev/public/Test_Projects/webnmap_cgi/runit.cgi $id &");
-			#print "/home/dev/public/Test_Projects/webnmap_cgi/runit.cgi $id &\n";
+			system("/home/webnmap/public_html/webnmap_cgi/runit.cgi $id &");
+			#print "/home/webnmap/public_html/webnmap_cgi/runit.cgi $id &\n";
 		}
 	}
 	$sth->finish();
